@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#FAF6EE" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>Undangan Pernikahan &ndash; Rizky &amp; Aulia</title>
+  <meta name="description" content="Dengan penuh kebahagiaan kami mengundang Anda untuk hadir dalam perayaan pernikahan Rizky &amp; Aulia, 14 Juni 2025." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div id="loading-screen" role="status" aria-live="polite">
+    <div class="loading-inner">
+      <div class="loading-ornament" aria-hidden="true"></div>
+      <p class="loading-sub">Membuka Undangan...</p>
+      <div class="loading-bar"><div class="loading-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ===== MUSIC BUTTON ===== -->
+  <button id="music-btn" aria-label="Putar / Hentikan musik latar">
+    <span class="music-icon" aria-hidden="true">&#9834;</span>
+  </button>
+  <audio id="bg-music" loop preload="none">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ===== PAGE 1: COVER (tidak bisa discroll, 100vh penuh) ===== -->
+  <section id="page-cover" class="cover-page" aria-label="Cover undangan">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow animate-fade-up delay-1">Undangan Pernikahan</p>
+
+      <div class="arch-container animate-fade-up delay-2">
+        <div class="arch-line"></div>
+        <div class="arch-frame">
+          <div class="arch-img" aria-hidden="true"></div>
+        </div>
+        <div class="arch-badge">
+          <span>14</span>
+          <hr>
+          <span>06</span>
+        </div>
+      </div>
+
+      <h1 class="hero-names animate-fade-up delay-3">
+        Rizky <span class="amp">&amp;</span> Aulia
+      </h1>
+
+      <p class="cover-greet animate-fade-up delay-4">
+        Kepada Yth.<br/>
+        <strong class="guest-name">Bapak / Ibu / Saudara/i</strong>
+      </p>
+      <button class="btn-open animate-fade-up delay-5" id="btn-open-invitation">
+        Buka Undangan
+        <span class="btn-icon" aria-hidden="true">&#8595;</span>
+      </button>
+    </div>
+    <div class="petals-container" id="petals" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== MAIN WRAPPER (tersembunyi sampai "Buka Undangan" diklik) ===== -->
+  <div id="main-invitation" class="hidden">
+
+    <!-- Bottom Navigation (Mobile) -->
+    <nav class="bottom-nav" id="bottom-nav" aria-label="Navigasi undangan">
+      <a href="#page-couple" class="bnav-item active" id="bnav-couple" aria-label="Mempelai">
+        <span class="bnav-icon" aria-hidden="true">&#128141;</span>
+        <span class="bnav-label">Mempelai</span>
+      </a>
+      <a href="#page-event" class="bnav-item" id="bnav-event" aria-label="Acara">
+        <span class="bnav-icon" aria-hidden="true">&#128197;</span>
+        <span class="bnav-label">Acara</span>
+      </a>
+      <a href="#page-maps" class="bnav-item" id="bnav-maps" aria-label="Lokasi &amp; Ucapan">
+        <span class="bnav-icon" aria-hidden="true">&#128506;</span>
+        <span class="bnav-label">Lokasi</span>
+      </a>
+    </nav>
+
+    <!-- Desktop side nav -->
+    <nav class="floating-nav" id="floating-nav" aria-label="Navigasi halaman">
+      <a href="#page-couple" class="nav-dot active" data-label="Mempelai" aria-label="Mempelai"></a>
+      <a href="#page-event"  class="nav-dot" data-label="Acara" aria-label="Acara"></a>
+      <a href="#page-maps"   class="nav-dot" data-label="Lokasi" aria-label="Lokasi"></a>
+    </nav>
+
+    <!-- ===== PAGE 2: COUPLE ===== -->
+    <section id="page-couple" class="inv-section" aria-label="Informasi mempelai">
+      <div class="section-bg couple-bg" aria-hidden="true"></div>
+      <div class="section-content">
+
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Dengan Rahmat Allah SWT</p>
+          <h2 class="section-title">Kami Bermaksud Mengundang</h2>
+          <p class="section-subtitle">untuk menjadi saksi kebahagiaan kami dalam ikatan suci pernikahan</p>
+        </div>
+
+        <!-- Couple — selalu berdampingan horizontal -->
+        <div class="couple-card reveal-up">
+          <!-- GROOM -->
+          <div class="person-side">
+            <div class="card-photo-wrap">
+              <div class="card-photo groom-photo" role="img" aria-label="Foto mempelai pria"></div>
+              <div class="card-photo-ring" aria-hidden="true"></div>
+            </div>
+            <p class="card-role">Mempelai Pria</p>
+            <h3 class="card-name">Muhammad Rizky Pratama, S.T.</h3>
+            <p class="card-parents">
+              Putra pertama dari<br />
+              <strong>Bpk. Ahmad Fauzi</strong><br />&amp; <strong>Ibu Siti Rahayu</strong>
+            </p>
+          </div>
+
+          <!-- Divider -->
+          <div class="couple-sep" aria-hidden="true">
+            <span class="sep-heart">&#9829;</span>
+          </div>
+
+          <!-- BRIDE -->
+          <div class="person-side">
+            <div class="card-photo-wrap">
+              <div class="card-photo bride-photo" role="img" aria-label="Foto mempelai wanita"></div>
+              <div class="card-photo-ring" aria-hidden="true"></div>
+            </div>
+            <p class="card-role">Mempelai Wanita</p>
+            <h3 class="card-name">Aulia Rahmawati Putri, S.Pd.</h3>
+            <p class="card-parents">
+              Putri pertama dari<br />
+              <strong>Bpk. Hendra Kusuma</strong><br />&amp; <strong>Ibu Dewi Lestari</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="ayat-container reveal">
+          <div class="ayat-ornament" aria-hidden="true">&#10077;</div>
+          <p class="ayat-text">
+            Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.
+          </p>
+          <p class="ayat-source">&mdash; QS. Ar-Rum: 21 &mdash;</p>
+          <div class="ayat-ornament right" aria-hidden="true">&#10078;</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== PAGE 3: EVENT ===== -->
+    <section id="page-event" class="inv-section" aria-label="Jadwal acara">
+      <div class="section-bg event-bg" aria-hidden="true"></div>
+      <div class="section-content">
+
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Jadwal Acara</p>
+          <h2 class="section-title">Rangkaian Acara</h2>
+          <p class="section-subtitle">Kehadiran Anda adalah kebahagiaan terbesar bagi kami</p>
+        </div>
+
+        <!-- COUNTDOWN -->
+        <div class="countdown-wrap reveal" aria-label="Hitung mundur menuju hari pernikahan">
+          <p class="countdown-label">Menuju Hari Istimewa</p>
+          <div class="countdown-timer" id="countdown-timer">
+            <div class="count-box">
+              <span id="cnt-days" aria-label="hari">00</span>
+              <label aria-hidden="true">Hari</label>
+            </div>
+            <div class="count-sep" aria-hidden="true">:</div>
+            <div class="count-box">
+              <span id="cnt-hours" aria-label="jam">00</span>
+              <label aria-hidden="true">Jam</label>
+            </div>
+            <div class="count-sep" aria-hidden="true">:</div>
+            <div class="count-box">
+              <span id="cnt-mins" aria-label="menit">00</span>
+              <label aria-hidden="true">Menit</label>
+            </div>
+            <div class="count-sep" aria-hidden="true">:</div>
+            <div class="count-box">
+              <span id="cnt-secs" aria-label="detik">00</span>
+              <label aria-hidden="true">Detik</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- EVENT CARDS — lokasi langsung link Google Maps -->
+        <div class="event-cards reveal-up">
+          <div class="event-card">
+            <div class="event-icon" aria-hidden="true">&#128332;</div>
+            <h3 class="event-type">Akad Nikah</h3>
+            <div class="event-detail-row">
+              <span class="event-icon-sm" aria-hidden="true">&#128197;</span>
+              <span>Sabtu, 14 Juni 2025</span>
+            </div>
+            <div class="event-detail-row">
+              <span class="event-icon-sm" aria-hidden="true">&#8987;</span>
+              <span>08.00 &ndash; 10.00 WIB</span>
+            </div>
+            <div class="event-detail-row">
+              <span class="event-icon-sm" aria-hidden="true">&#128205;</span>
+              <a href="https://maps.google.com/?q=Masjid+Al-Ikhlas+Jakarta+Selatan"
+                 target="_blank" rel="noopener noreferrer" class="loc-link">
+                Masjid Al-Ikhlas, Jl. Mawar No. 1, Jakarta Selatan
+              </a>
+            </div>
+            <a href="https://maps.google.com/?q=Masjid+Al-Ikhlas+Jakarta+Selatan"
+               target="_blank" rel="noopener noreferrer" class="btn-gmaps">
+              Buka Google Maps
+            </a>
+          </div>
+
+          <div class="event-card featured-event">
+            <div class="event-icon" aria-hidden="true">&#128141;</div>
+            <h3 class="event-type">Resepsi</h3>
+            <div class="event-detail-row">
+              <span class="event-icon-sm" aria-hidden="true">&#128197;</span>
+              <span>Sabtu, 14 Juni 2025</span>
+            </div>
+            <div class="event-detail-row">
+              <span class="event-icon-sm" aria-hidden="true">&#8987;</span>
+              <span>11.00 &ndash; 15.00 WIB</span>
+            </div>
+            <div class="event-detail-row">
+              <span class="event-icon-sm" aria-hidden="true">&#128205;</span>
+              <a href="https://maps.google.com/?q=Hotel+Mulia+Jakarta"
+                 target="_blank" rel="noopener noreferrer" class="loc-link">
+                Grand Ballroom Hotel Mulia, Jl. Asia Afrika No. 8, Jakarta
+              </a>
+            </div>
+            <a href="https://maps.google.com/?q=Hotel+Mulia+Jakarta"
+               target="_blank" rel="noopener noreferrer" class="btn-gmaps">
+              Buka Google Maps
+            </a>
+          </div>
+        </div>
+
+        <!-- DRESS CODE -->
+        <div class="dresscode reveal">
+          <h3 class="dresscode-title">Dress Code</h3>
+          <div class="dresscode-colors" role="list" aria-label="Pilihan warna pakaian">
+            <div class="color-swatch" style="background:#F5F0E8;" role="listitem">
+              <span style="color:#3A2E22">Cream</span>
+            </div>
+            <div class="color-swatch" style="background:#C9A84C;" role="listitem">
+              <span style="color:#fff">Gold</span>
+            </div>
+            <div class="color-swatch" style="background:#D4B896;" role="listitem">
+              <span style="color:#3A2E22">Beige</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RSVP via WhatsApp -->
+        <div class="rsvp-wrap reveal">
+          <h3 class="rsvp-title">Konfirmasi Kehadiran</h3>
+          <p class="rsvp-sub">Mohon konfirmasi sebelum <strong>7 Juni 2025</strong></p>
+          <form class="rsvp-form" id="rsvp-form" novalidate>
+            <input
+              type="text"
+              id="rsvp-name"
+              name="rsvp-name"
+              placeholder="Nama Anda"
+              class="rsvp-input"
+              autocomplete="name"
+              autocapitalize="words"
+              required
+            />
+            <div class="rsvp-radio-group" role="group" aria-label="Apakah Anda hadir?">
+              <label class="rsvp-radio">
+                <input type="radio" name="attend" value="hadir" id="radio-hadir" checked />
+                <span>Hadir</span>
+              </label>
+              <label class="rsvp-radio">
+                <input type="radio" name="attend" value="tidak" id="radio-tidak" />
+                <span>Tidak Hadir</span>
+              </label>
+            </div>
+            <input
+              type="number"
+              id="rsvp-guests"
+              name="rsvp-guests"
+              placeholder="Jumlah tamu (termasuk Anda)"
+              class="rsvp-input"
+              min="1" max="10"
+              inputmode="numeric"
+              pattern="[0-9]*"
+            />
+            <button type="submit" class="btn-rsvp-wa" id="btn-rsvp">
+              Konfirmasi via WhatsApp
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== PAGE 4: MAPS + UCAPAN ===== -->
+    <section id="page-maps" class="inv-section" aria-label="Lokasi dan ucapan">
+      <div class="section-bg maps-bg" aria-hidden="true"></div>
+      <div class="section-content">
+
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Lokasi Acara</p>
+          <h2 class="section-title">Petunjuk Arah</h2>
+        </div>
+
+        <!-- MAPS TABS -->
+        <div class="maps-tabs reveal" role="tablist" aria-label="Pilih lokasi">
+          <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="map-akad" id="tab-akad" data-tab="akad">Akad Nikah</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="map-resepsi" id="tab-resepsi" data-tab="resepsi">Resepsi</button>
+        </div>
+
+        <div class="maps-container reveal">
+          <div class="map-panel active" id="map-akad" role="tabpanel" aria-labelledby="tab-akad">
+            <div class="map-info-bar">
+              <span class="map-pin" aria-hidden="true">&#128205;</span>
+              <span class="map-address">Masjid Al-Ikhlas, Jl. Mawar No. 1, Jakarta Selatan</span>
+            </div>
+            <div class="map-frame-wrap">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613!3d-6.1944491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid"
+                width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Peta Lokasi Akad Nikah">
+              </iframe>
+            </div>
+            <a href="https://maps.google.com/?q=Masjid+Al-Ikhlas+Jakarta+Selatan" target="_blank" rel="noopener noreferrer" class="btn-maps" aria-label="Buka di Google Maps">
+              Buka di Google Maps
+            </a>
+          </div>
+
+          <div class="map-panel" id="map-resepsi" role="tabpanel" aria-labelledby="tab-resepsi">
+            <div class="map-info-bar">
+              <span class="map-pin" aria-hidden="true">&#128205;</span>
+              <span class="map-address">Grand Ballroom Hotel Mulia, Jl. Asia Afrika No. 8, Jakarta</span>
+            </div>
+            <div class="map-frame-wrap">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2952787020034!2d106.8108!3d-6.2146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e8e4a1a1a1%3A0x0!2sHotel%20Mulia%20Jakarta!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid"
+                width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Peta Lokasi Resepsi">
+              </iframe>
+            </div>
+            <a href="https://maps.google.com/?q=Hotel+Mulia+Jakarta" target="_blank" rel="noopener noreferrer" class="btn-maps" aria-label="Buka di Google Maps">
+              Buka di Google Maps
+            </a>
+          </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="inv-footer reveal">
+          <h2 class="footer-names">Rizky &amp; Aulia</h2>
+          <p class="footer-date">14 &middot; 06 &middot; 2025</p>
+          <p class="footer-quote">
+            Semoga Allah memberkahi pernikahan kami dan menjadikan rumah tangga kami sakinah, mawaddah, warahmah. Aamiin.
+          </p>
+          <div class="footer-hashtag">#RizkyAulia2025</div>
+          <p class="footer-credit">Made with love &mdash; Undangan Digital</p>
+        </footer>
+
+      </div>
+    </section>
+
+  </div><!-- end #main-invitation -->
+
+  <!-- Firebase SDK -->
+  <script type="module" src="firebase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
